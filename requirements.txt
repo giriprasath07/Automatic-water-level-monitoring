@@ -1,0 +1,13 @@
+# Hardware Requirements
+Arduino UNO or ESP32
+Ultrasonic Sensor (HC-SR04)
+Relay Module (5V / 3.3V)
+Water Pump or Motor
+Power Supply (5V / 12V as per pump)
+Jumper Wires and Breadboard
+
+# Software Requirements
+Arduino IDE (v2.0 or higher)
+USB Drivers for Arduino/ESP32
+Board Manager: ESP32 by Espressif Systems (if using ESP32)
+Library: NewPing (optional for ultrasonic distance measurement)
