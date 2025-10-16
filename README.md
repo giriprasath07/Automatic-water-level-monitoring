@@ -99,13 +99,6 @@ void loop() {
 
 ---
 
-## 📺 Demo Video
-[![Watch the Video](prototype.jpg)](https://youtu.be/your_video_link_here)
-
-> Replace the image and link with your actual demo.
-
----
-
 ## 🧩 Customization
 - Adjust the distance threshold in code:
   ```cpp
