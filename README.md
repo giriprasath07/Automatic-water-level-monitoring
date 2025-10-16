@@ -120,8 +120,15 @@ void loop() {
 
 ---
 
-## 📸 Prototype
-![Prototype Setup](prototype.jpg)
+## 📸 Top View
+
+![Prototype Setup](TopIMG.jpg)
+
+---
+
+## 📸 Side View
+
+![Prototype Setup](SideIMG.jpg)
 
 ---
 
