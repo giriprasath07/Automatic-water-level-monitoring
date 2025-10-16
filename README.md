@@ -1,43 +1,47 @@
-💧 Automatic Water Level Monitoring Tank Project (Ultrasonic + Relay + Motor)
-📘 Overview
+# 💧 Automatic Water Level Monitoring Tank Project (Ultrasonic + Relay + Motor)
 
-This project automates the control of a water pump motor using an ultrasonic sensor to measure the water level inside a tank.
-When the water level goes below a certain range, the relay turns ON the motor to fill the tank.
-Once the water level is above the threshold, the motor automatically turns OFF — ensuring no overflow or manual intervention.
+## 📘 Overview
+This project automates the control of a **water pump motor** using an **ultrasonic sensor** to measure the water level inside a tank.  
+When the water level goes **below a certain range**, the relay turns **ON the motor** to fill the tank.  
+Once the water level is **above the threshold**, the motor automatically **turns OFF** — ensuring no overflow or manual intervention.
 
-⚙️ Components Used
+---
 
-Microcontroller: ESP32 / Arduino UNO (any compatible board)
+## ⚙️ Components Used
+- **Microcontroller:** ESP32 / Arduino UNO (any compatible board)  
+- **Ultrasonic Sensor (HC-SR04)**  
+- **Relay Module (5V or 3.3V logic compatible)**  
+- **Water Pump / Motor**  
+- **Jumper Wires**  
+- **Power Supply**
 
-Ultrasonic Sensor (HC-SR04)
+---
 
-Relay Module (5V or 3.3V logic compatible)
+## ⚡ Circuit Connections
 
-Water Pump / Motor
+| Component | Pin Connection (ESP32 Example) |
+|------------|-------------------------------|
+| Ultrasonic TRIG | GPIO 5 |
+| Ultrasonic ECHO | GPIO 18 |
+| Relay Signal | GPIO 16 |
+| VCC & GND | 5V / 3.3V and GND respectively |
 
-Jumper Wires
+> ⚠️ **Note:** Relay modules are often **active LOW**, meaning:  
+> - `digitalWrite(RELAY_PIN, LOW)` → Motor **ON**  
+> - `digitalWrite(RELAY_PIN, HIGH)` → Motor **OFF**
 
-Power Supply
+---
 
-⚡ Circuit Connections
-Component	Pin Connection (ESP32 Example)
-Ultrasonic TRIG	GPIO 5
-Ultrasonic ECHO	GPIO 18
-Relay Signal	GPIO 16
-VCC & GND	5V / 3.3V and GND respectively
+## 🔌 Circuit Diagram
+![Water Level Control Circuit](CircuitDiagram.jpg)
 
-⚠️ Note: Relay modules are often active LOW, meaning:
+> Replace the image name with your actual file:  
+> `![Prototype Setup](prototype.jpg)`
 
-digitalWrite(RELAY_PIN, LOW) → Motor ON
+---
 
-digitalWrite(RELAY_PIN, HIGH) → Motor OFF
-
-🔌 Circuit Diagram
-
-Replace the image name with your actual file:
-![Prototype Setup](prototype.jpg)
-
-💻 Arduino / ESP32 Code
+## 💻 Arduino / ESP32 Code
+```cpp
 // Pin definitions
 const int TRIG_PIN = 5;     // Ultrasonic TRIG
 const int ECHO_PIN = 18;    // Ultrasonic ECHO
@@ -83,43 +87,44 @@ void loop() {
   
   delay(500); // small delay to avoid rapid switching
 }
+```
 
-🧠 Working Principle
+---
 
-The ultrasonic sensor measures the distance between the sensor and the water surface.
+## 🧠 Working Principle
+1. The **ultrasonic sensor** measures the distance between the sensor and the water surface.  
+2. If the distance is **greater than 50 cm (tank low)** → motor **turns ON** via relay.  
+3. If the distance is **less than 50 cm (tank full)** → motor **turns OFF** automatically.  
+4. The system continuously monitors and maintains the water level.
 
-If the distance is greater than 50 cm (tank low) → motor turns ON via relay.
+---
 
-If the distance is less than 50 cm (tank full) → motor turns OFF automatically.
-
-The system continuously monitors and maintains the water level.
-
-📺 Demo Video
+## 📺 Demo Video
 [![Watch the Video](prototype.jpg)](https://youtu.be/your_video_link_here)
 
+> Replace the image and link with your actual demo.
 
-Replace the image and link with your actual demo.
+---
 
-🧩 Customization
+## 🧩 Customization
+- Adjust the distance threshold in code:
+  ```cpp
+  const int RANGE = 50; // in cm
+  ```
+  Change it based on your tank size and sensor position.
 
-Adjust the distance threshold in code:
+- You can also:
+  - Add **LCD / OLED display** for live water level.  
+  - Add **Blynk / IoT** integration for remote monitoring.  
+  - Use a **float sensor** as backup for safety.
 
-const int RANGE = 50; // in cm
+---
 
+## 📸 Prototype
+![Prototype Setup](prototype.jpg)
 
-Change it based on your tank size and sensor position.
+---
 
-You can also:
-
-Add LCD / OLED display for live water level.
-
-Add Blynk / IoT integration for remote monitoring.
-
-Use a float sensor as backup for safety.
-
-📸 Prototype
-
-🧑‍💻 Author
-
-Giriprasath TK
-Project: Automatic Water Level Monitoring Using Ultrasonic Sensor and Relay Control
+## 🧑‍💻 Author
+**Giriprasath TK**  
+Project: *Automatic Water Level Monitoring Using Ultrasonic Sensor and Relay Control*
