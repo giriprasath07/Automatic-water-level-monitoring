@@ -36,7 +36,7 @@ Once the water level is **above the threshold**, the motor automatically **turns
 ![Water Level Control Circuit](CircuitDiagram.jpg)
 
 > Replace the image name with your actual file:  
-> `![Prototype Setup](prototype.jpg)`
+> `![Prototype Setup](CircuitDiagram.jpg)`
 
 ---
 
