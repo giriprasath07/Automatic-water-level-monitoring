@@ -114,8 +114,7 @@ void loop() {
 ---
 
 ## 📸 Top View
-
-![Prototype Setup](Top IMG.png)
+![Top View](Top%20IMG.png)
 
 ---
 
