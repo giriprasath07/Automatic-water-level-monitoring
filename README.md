@@ -35,9 +35,6 @@ Once the water level is **above the threshold**, the motor automatically **turns
 ## 🔌 Circuit Diagram
 ![Water Level Control Circuit](CircuitDiagram.png)
 
-> Replace the image name with your actual file:  
-> `![Prototype Setup](CircuitDiagram.jpg)`
-
 ---
 
 ## 💻 Arduino / ESP32 Code
@@ -127,3 +124,5 @@ void loop() {
 ## 🧑‍💻 Author
 **Giriprasath TK**  
 Project: *Automatic Water Level Monitoring Using Ultrasonic Sensor and Relay Control*
+Mail   :  tkcharan8@gmail.com
+
