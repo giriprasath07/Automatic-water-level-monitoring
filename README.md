@@ -124,5 +124,5 @@ void loop() {
 ## 🧑‍💻 Author
 **Giriprasath TK**  
 Project: *Automatic Water Level Monitoring Using Ultrasonic Sensor and Relay Control*
-Mail   :  tkcharan8@gmail.com
+*Mail   :  tkcharan8@gmail.com*
 
